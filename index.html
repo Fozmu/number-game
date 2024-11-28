@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    
+    , initial-scale=1.0">
+    <title>Compusafe Mini-game</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="./cropped-CompuSafe-Favicon-32x32.webp">
+
+    <title>Number Guessing Game</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+
+</head>
+<body>
+  
+    <center>
+    <div class="pad-card">
+
+    <p>
+        Wir haben eine Zufallszahl zwischen 1 und 100 ausgewählt. Versuchen Sie, sie zu erraten.
+    </p>
+
+    <div class="form">
+        <label for="guessField">
+            Geben Sie eine Vermutung ein:
+        </label>
+
+        <input type="text" 
+               id="guessField" 
+               class="guessField">
+
+        <input type="submit" 
+               value="Abschicken" 
+               class="guessSubmit" 
+               id="submitguess">
+    </div>
+
+    <script type="text/javascript">
+
+        
+
+
+        let y = Math.floor(Math.random() * 100 + 1);
+
+
+        
+        let guess = 1;
+
+        document.getElementById("submitguess").onclick = function () {
+   
+            let x = document.getElementById("guessField").value;
+
+            if (x == y) {
+                alert("Du hast die richtige Zahl eratten!");
+            }
+
+            else if (x > y) {
+                guess++;
+                alert("Versuche eine kleiner Zahl");
+            }
+            else {
+                guess++;
+                alert("Versuche eine größere Zahl")
+            }
+        }
+    </script>
+
+   </div> 
+</center>
+
+</body>
+</body>
+
+</html>
